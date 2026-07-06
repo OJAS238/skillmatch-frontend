@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { API_BASE_URL } from "../config";
 import {
   LayoutDashboard,
   Network,
@@ -83,7 +84,7 @@ export default function Dashboard({
     async function loadUserStats() {
       setStatsLoading(true);
       try {
-        const response = await fetch(`http://localhost:5000/api/auth/user/${userId}`);
+        const response = await fetch(`${API_BASE_URL}/api/auth/user/${userId}`);
         const data = await response.json();
         if (data.success && data.user) {
           setUserStats(data.user);
@@ -99,7 +100,7 @@ export default function Dashboard({
     async function loadSavedAIPath() {
       setCurriculumLoading(true);
       try {
-        const response = await fetch(`http://localhost:5000/api/quiz/curriculum/${userId}`);
+        const response = await fetch(`${API_BASE_URL}/api/quiz/curriculum/${userId}`);
         const data = await response.json();
         if (data.success && data.curriculum) {
           setCurriculum(data.curriculum);
@@ -934,6 +935,9 @@ export default function Dashboard({
     </div>
   );
 }
+
+
+
 
 
 

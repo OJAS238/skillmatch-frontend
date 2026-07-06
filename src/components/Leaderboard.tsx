@@ -610,3 +610,4 @@ export default function Leaderboard({ onNavigate, onRestart, selectedAnswers, ac
   );
 }
 
+

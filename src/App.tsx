@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { API_BASE_URL } from "./config";
 import Assessment from "./components/Assessment";
 import Dashboard from "./components/Dashboard";
 import Leaderboard from "./components/Leaderboard";
@@ -6,7 +7,6 @@ import FocusLesson from "./components/FocusLesson";
 import Badges from "./components/Badges";
 import Profile from "./components/Profile";
 import AuthPage from "./components/AuthPage";
-import { API_BASE_URL } from "./config";
 import { Sparkles, Network, RefreshCw, CheckCircle2, Award, Zap, BookOpen, Layers } from "lucide-react";
 
 export default function App() {
@@ -279,5 +279,7 @@ export default function App() {
     </div>
   );
 }
+
+
 
 

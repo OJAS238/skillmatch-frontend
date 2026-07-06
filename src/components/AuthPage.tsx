@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { Mail, Lock, Eye, EyeOff, Bolt, ArrowRight, Sparkles, User } from "lucide-react";
 import { API_BASE_URL } from "../config";
+import { Mail, Lock, Eye, EyeOff, Bolt, ArrowRight, Sparkles, User } from "lucide-react";
 
 interface AuthPageProps {
   onAuthSuccess: (data: { name: string; email: string }) => void;
@@ -461,6 +461,8 @@ export default function AuthPage({ onAuthSuccess }: AuthPageProps) {
     </div>
   );
 }
+
+
 
 
 

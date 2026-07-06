@@ -646,3 +646,4 @@ export default function Badges({ onNavigate, onRestart, selectedAnswers, activeT
     </div>
   );
 }
+

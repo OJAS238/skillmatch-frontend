@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { API_BASE_URL } from "../config";
 import {
   LayoutDashboard,
   Network,
@@ -68,7 +69,7 @@ export default function Assessment({ onComplete }: AssessmentProps) {
     if (!userId) return;
     async function loadStats() {
       try {
-        const response = await fetch(`http://localhost:5000/api/auth/user/${userId}`);
+        const response = await fetch(`${API_BASE_URL}/api/auth/user/${userId}`);
         const data = await response.json();
         if (data.success && data.user) {
           setUserStats(data.user);
@@ -274,7 +275,7 @@ export default function Assessment({ onComplete }: AssessmentProps) {
             <Lock className="w-3.5 h-3.5 ml-auto" />
           </button>
 
-          {/* Skill Tree Tab (Active by default matching Image) — this IS the assessment, so it stays live */}
+          {/* Skill Tree Tab (Active by default matching Image) — this IS the assessment, stays live */}
           <button
             onClick={() => setActiveTab("Skill Tree")}
             className={`flex items-center gap-3.5 px-4 py-3 rounded-xl text-left w-full transition-all duration-300 cursor-pointer ${
@@ -526,6 +527,8 @@ export default function Assessment({ onComplete }: AssessmentProps) {
     </div>
   );
 }
+
+
 
 
 
