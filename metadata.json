@@ -1,0 +1,6 @@
+{
+  "name": "SkillMatch Assessment",
+  "description": "An interactive, visually polished onboarding assessment questionnaire for skill learning styles.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
